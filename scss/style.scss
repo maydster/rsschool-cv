@@ -1,0 +1,299 @@
+@import "../../node_modules/normalize.css/normalize";
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #544837;
+}
+
+.soft__container,
+.hard__container {
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.soft__container {
+    max-width: 696px;
+    padding: 0 40px;
+    height: 100%;
+}
+.hard__container {
+    max-width: 1030px;
+}
+
+.main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.soft {
+    background-color: #212121;
+    color: #fff;
+    padding: 80px 0;
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        
+        min-height: 100%;
+    }
+
+    &__img {
+        border: 5px solid #fff;
+        margin: 0 auto 40px;
+    }
+
+    &__main {
+        margin-bottom: 60px;
+    }
+
+    &__name {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    &__profession {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        text-align: center;
+        text-transform: uppercase;
+       
+    }
+
+    &__about {
+        margin-bottom: 120px;
+    }
+
+    &__about-title {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__about-text {
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    &__contacts-title {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__contacts-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__contacts-property {
+        margin-right: 15px;
+    }
+
+    &__contacts-line {
+        display: block;
+        white-space: nowrap;
+    }
+
+    &__contacts-link {
+        color: #fff;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            text-decoration: underline;
+            color: #ccc;
+        }
+    }
+}
+
+.hard {
+
+    width: 100%;
+    background-color: #f3eee9;
+    color: #000;
+    padding: 80px 100px 80px 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    
+
+    &__title {
+        font-size: 2em;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-stretch: 200%;
+    }
+
+    &__hr {
+        border: 0;
+        height: 1px;
+        background: #000;
+        margin: 0;
+    }
+
+    &__header {
+        margin-bottom: 40px;
+    }
+
+    &__exp{
+        margin-bottom: 40px;
+    }
+
+    &__exp-box {
+        color: #2a2a2a;
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    &__exp-field {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__exp-name {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__exp-descr {
+        text-align: justify;
+    }
+
+    &__skills {
+        margin-bottom: 40px;
+    }
+
+    &__skills-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__skills-col {
+        width: 40%;
+    }
+
+    &__skills-title {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    ul.hard__skills-list {
+        list-style: square outside;
+    }
+
+    &__skills-item {
+        margin-bottom: 5px;
+    }
+
+    &__lang {
+        margin-bottom: 40px;
+    }
+
+    &__lang-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        & .text{
+            margin-left: 20px;
+            display: block;
+          }
+    }
+
+}
+
+.progress-bar{
+    position: relative;
+    width: 200px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .progress-bar .progress{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #333;
+  }  
+
+@import "media";
