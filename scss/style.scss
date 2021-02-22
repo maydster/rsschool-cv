@@ -1,0 +1,170 @@
+@import "../../node_modules/normalize.css/normalize";
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #544837;
+}
+
+.soft__container,
+.hard__container {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.soft__container {
+    max-width: 696px;
+}
+.hard__container {
+    max-width: 1030px;
+}
+
+.soft {
+    max-width: 40%;
+    background-color: #212121;
+    color: #fff;
+    padding: 80px 0;
+
+    &__img {
+        border: 5px solid #fff;
+        width: 80%;
+        margin: 0 auto 40px;
+    }
+
+    &__name {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    &__profession {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    &__about {
+        margin-bottom: 120px;
+    }
+
+    &__about-title {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__about-text {
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    &__contacts-title {
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__contacts-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__contacts-property {
+        margin-right: 15px;
+    }
+
+    &__contacts-line {
+        display: block;
+    }
+
+    &__contacts-link {
+        color: #fff;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            text-decoration: underline;
+            color: #ccc;
+        }
+    }
+}
+
+
+
+
+
+@import "media";
